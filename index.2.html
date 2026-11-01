@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090910">
+  <title>Who Are You, Really?</title>
+  <meta name="description" content="A fun personality quiz. Your choices reveal more than you think.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="shell">
+    <header class="topbar"><a class="brand" href="#" id="brandHome"><span class="brand-mark">?</span> W.A.Y.R.</a><span class="top-note">A LITTLE SELF-DISCOVERY</span></header>
+
+    <section id="home" class="screen active">
+      <div class="hero">
+        <div class="eyebrow"><span class="pulse"></span> THE INTERNET'S LEAST SCIENTIFIC TEST</div>
+        <h1>Who are<br><span class="gradient-text">you, really?</span></h1>
+        <p class="hero-copy">Your choices reveal more than you think. Take a few minutes, trust your instincts, and meet the version of you that your friends already know.</p>
+        <div class="name-field"><label for="nickname">WHAT SHOULD WE CALL YOU?</label><input id="nickname" maxlength="20" placeholder="Your nickname (optional)" autocomplete="off"></div>
+        <button class="primary-btn" id="startBtn">Discover yourself <span>↗</span></button>
+        <div class="hero-meta"><span>✦ 12 questions</span><span>✦ 2–4 minutes</span><span>✦ Just for fun</span></div>
+      </div>
+      <div class="preview-wrap">
+        <div class="preview-heading"><span>THE POSSIBILITIES</span><span>01 — 08</span></div>
+        <div class="archetypes-preview">
+          <div class="mini-card"><b>01</b><span>🪐</span><strong>The Observer</strong></div>
+          <div class="mini-card"><b>02</b><span>⚡</span><strong>The Chaos Magnet</strong></div>
+          <div class="mini-card"><b>03</b><span>🌙</span><strong>The Overthinker</strong></div>
+          <div class="mini-card"><b>04</b><span>🎬</span><strong>The Main Character</strong></div>
+        </div>
+      </div>
+      <footer class="foot">NOT A SCIENTIFIC ASSESSMENT. JUST A MIRROR WITH A SENSE OF HUMOUR.</footer>
+    </section>
+
+    <section id="quiz" class="screen">
+      <div class="quiz-top"><button class="text-btn" id="exitQuiz">← Exit</button><span id="questionCount">01 / 12</span></div>
+      <div class="progress-track"><div id="progressBar"></div></div>
+      <div class="question-area">
+        <div class="eyebrow" id="questionCategory">A SMALL SCENARIO</div>
+        <h2 id="questionText">Question goes here</h2>
+        <p class="subtle">Pick the answer that feels most like you. No overthinking. (Yes, that's an instruction.)</p>
+        <div id="options" class="options"></div>
+      </div>
+      <div class="quiz-bottom"><button class="text-btn" id="backBtn">← Previous</button><span>TRUST YOUR FIRST INSTINCT</span></div>
+    </section>
+
+    <section id="loading" class="screen loading-screen">
+      <div class="loader-orbit"><div></div><span>✦</span></div>
+      <div class="eyebrow">CONNECTING THE DOTS</div><h2>Reading between<br>your choices<span class="dots">...</span></h2>
+      <p class="subtle">This is definitely a very serious process.</p>
+    </section>
+
+    <section id="result" class="screen">
+      <div class="result-top"><span class="eyebrow">YOUR PERSONALITY REVEAL</span><button class="text-btn" id="restartTop">Start over ↗</button></div>
+      <div class="result-card">
+        <div class="result-art" id="resultArt"><span id="resultEmoji">🪐</span><div class="art-orbit"></div></div>
+        <div class="result-content">
+          <div class="eyebrow" id="resultNumber">ARCHETYPE 01 / 08</div>
+          <h2 id="resultTitle">The Observer</h2>
+          <p class="result-tagline" id="resultTagline"></p>
+          <p id="resultDescription" class="result-description"></p>
+        </div>
+      </div>
+      <div class="result-details">
+        <article><span class="detail-icon">✦</span><h3>Your strengths</h3><p id="strengths"></p></article>
+        <article><span class="detail-icon">↗</span><h3>Your plot twist</h3><p id="weakness"></p></article>
+        <article><span class="detail-icon">◉</span><h3>How friends see you</h3><p id="friends"></p></article>
+        <article><span class="detail-icon">✧</span><h3>Brutally honest</h3><p id="honest"></p></article>
+      </div>
+      <div class="share-panel">
+        <div><span class="eyebrow">THAT'S SO YOU</span><p>Send your result to someone who thinks they know you.</p></div>
+        <div class="share-actions"><button class="primary-btn small" id="shareBtn">Share result ↗</button><button class="secondary-btn" id="copyBtn">Copy text</button></div>
+      </div>
+      <button class="restart-btn" id="restartBtn">↻ Take the test again</button>
+      <p class="disclaimer">This is a playful personality quiz, not a validated psychological assessment. Your result is generated from your answers and stored only in this browser.</p>
+    </section>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
